@@ -1,0 +1,47 @@
+# Rules for C#
+# 原則として、Microsoft公式ドキュメント日本語版 https://docs.microsoft.com/ja-jp/ の訳語に準じます
+
+meta:
+  reviewer:
+    - nowsprinting
+  rules:   https://github.com/prh/rules
+
+version: 1
+rules:
+  - expected: .NET
+    pattern:  /\.[Nn][Ee][Tt]/
+  - expected: NUnit
+  - expected: NSubstitute
+  - expected: NuGet
+  - expected: Cysharp
+  - expected: Roslyn
+  - expected: アナライザー
+    patterns:
+      - /アナライザ(?!ー)/
+      - 解析器
+      - /[Aa]nalyzer/
+  - expected: 重要度
+    patterns:
+      - 重大度  # JetBrains公式ではこちら。重要度で統一するため採択しない。see: jetbrains.yml
+      - /[Ss]everity/
+  - expected: 属性
+    patterns:
+      - アトリビュート
+      - /[Aa]ttribute/
+  - expected: Visual Studio
+    pattern:  /[Vv]isual ?[Ss]tudio/
+  - expected: VS Code # 正式には "Visual Studio Code"
+    pattern:  /[Vv][Ss] ?[Cc]ode/
+  - expected: パラメーター # メソッドの定義側はパラメーター/ media/techbooster.ymlに末尾長音記号なしの定義があるのでコメントアウトすること
+    pattern:  /パラメー?タ(?!ー)/
+  - expected: 引数 # メソッドの呼び出し側が渡すデータは引数
+    pattern:  引き数
+  - expected: 戻り値
+    patterns:
+      - /戻り?[値血地]/
+      - /返り?[値血地]/
+      - 返却値
+  - expected: 名前空間
+    patterns:
+      - /ネーム・?スペース/
+      - /[Nn]ame[Ss]pace/

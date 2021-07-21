@@ -1,0 +1,44 @@
+# Rules for xUnit Test Patterns
+# Web版: http://xunitpatterns.com/
+# 書籍版: https://amzn.to/3r15knQ
+# 原則、カタカナ表記に統一する
+
+meta:
+  reviewer:
+    - nowsprinting
+  rules:   https://github.com/prh/rules
+
+version: 1
+rules:
+  - expected: パラメタライズドテスト
+    patterns:
+      - /パラメー?ター?ライズド?・?テスト/
+      - /parameterized tests?/
+  - expected: 曖昧なテスト
+    patterns:
+      - /あいまいなテスト/
+      - /[Oo]bscure ?[Tt]ests?/
+  - expected: テストダブル
+    patterns:
+      - /テスト・?ダブル/
+      - /[Tt]est ?[Dd]oubles?/
+  - expected: テストスタブ
+    patterns:
+      - /テスト・?スタブ/
+      - /[Tt]est ?[Ss]tub/
+  - expected: テストスパイ
+    patterns:
+      - /テスト・?スパイ/
+      - /[Tt]est ?[Ss]py/
+  - expected: モックオブジェクト
+    patterns:
+      - /モック・?オブジェクト/
+      - /[Mm]ock ?[Oo]bject/
+  - expected: フェイクオブジェクト
+    patterns:
+      - /フェイク・?オブジェクト/
+      - /[Ff]ake ?[Oo]bject/
+  - expected: ダミーオブジェクト
+    patterns:
+      - /ダミー・?オブジェクト/
+      - /[Dd]ummy ?[Oo]bject/

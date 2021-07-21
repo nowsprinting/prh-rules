@@ -1,0 +1,19 @@
+# Rules for JetBrains IDEs
+# 原則として、JetBrains公式マニュアル日本語版 https://pleiades.io/ の訳語に準じます
+
+meta:
+  reviewer:
+    - nowsprinting
+  rules:   https://github.com/prh/rules
+
+version: 1
+rules:
+  - expected: JetBrains
+  - expected: IntelliJ
+  - expected: IDEA
+  - expected: Rider
+
+# - expected: 重大度 # Microsoft公式と訳が異なるので採用しない。see: csharp.yml
+#   patterns:
+#     - 重要度
+#     - /[Ss]everity/

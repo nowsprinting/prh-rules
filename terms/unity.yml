@@ -1,0 +1,125 @@
+# Rules for Unity
+# 原則として、Unity User Manualの用語集 https://docs.unity3d.com/ja/2020.3/Manual/Glossary.html の訳語に準じます
+# ただし、Unity User Manual本文に英単語のままで表記されている「Projectウィンドウ」や、コード中にも出現する「Scene」などは英単語を採択しています
+
+meta:
+  reviewer:
+    - nowsprinting
+  rules:   https://github.com/prh/rules
+
+version: 1
+imports:
+  - ./csharp.yml
+rules:
+  - expected: Unity
+  - expected: エディター
+    patterns:
+      - /エディタ(?!ー)/
+      - /[Ee]ditor/
+    specs:
+      - from: エディタ
+        to:   エディター
+      - from: エディター
+        to:   エディター
+  - expected: Scene
+    pattern:  シーン
+  - expected: Prefab
+    pattern:  /プレ(ハ|ファ)ブ/
+  - expected: Asset # 一般的な言葉としてカタカナ表記を使用するケースもありそうなのでキャピタライズのみ
+  - expected: Sceneビュー
+    pattern:  /([Ss]cene|シーン)[ ・]?([Vv]iew|[Ww]indow|ビュー|ウ[イィ]ンド[ウゥー])/
+    specs:
+      - from: シーン・ビュー
+        to:   Sceneビュー
+      - from: シーンウィンドー
+        to:   Sceneビュー
+      - from: シーンビュー
+        to:   Sceneビュー
+      - from: sceneview
+        to:   Sceneビュー
+      - from: scenewindow
+        to:   Sceneビュー
+  - expected: Gameビュー
+    pattern:  /([Gg]ame|ゲーム)[ ・]?([Vv]iew|[Ww]indow|ビュー|ウ[イィ]ンド[ウゥー])/
+  - expected: Hierarchyウィンドウ
+    pattern:  /([Ss]cene|シーン)?[ ・]?([Hh]ierarchy|ヒエラルキー?)[ ・]?([Vv]iew|[Ww]indow|ビュー|ウ[イィ]ンド[ウゥー])/
+    specs:
+      - from: scene hierarchy view
+        to:   Hierarchyウィンドウ
+      - from: シーン・ヒエラルキ・ウインドー
+        to:   Hierarchyウィンドウ
+      - from: ヒエラルキウィンドゥ
+        to:   Hierarchyウィンドウ
+  - expected: Inspectorウィンドウ
+    pattern:  /([Ii]nspector|インスペクター?)[ ・]?([Vv]iew|[Ww]indow|ビュー|ウ[イィ]ンド[ウゥー])/
+  - expected: Projectウィンドウ
+    pattern:  /([Pp]roject|プロジェクト)[ ・]?([Vv]iew|[Ww]indow|ビュー|ウ[イィ]ンド[ウゥー])/
+  - expected: Consoleウィンドウ
+    pattern:  /([Cc]onsole|コンソール)[ ・]?([Vv]iew|[Ww]indow|ビュー|ウ[イィ]ンド[ウゥー])/
+  - expected: Test Runnerウィンドウ
+    pattern:  /([Tt]est ?[Rr]unner|テスト・?ランナー?)[ ・]?([Vv]iew|[Ww]indow|ビュー|ウ[イィ]ンド[ウゥー])/
+  - expected: Package Managerウィンドウ
+    pattern:  /([Pp]ackage ?[Mm]anager|パッケージ・?マネージャー?)[ ・]?([Vv]iew|[Ww]indow|ビュー|ウ[イィ]ンド[ウゥー])/
+  - expected: UPMパッケージ
+    pattern:  /[Uu][Pp][Mm][ ・]?([Pp]ackages?|パッケージ)/
+    specs:
+      - from: UPM package
+        to:   UPMパッケージ
+      - from: UPMPackages
+        to:   UPMパッケージ
+      - from: upm パッケージ
+        to:   UPMパッケージ
+  - expected: 組み込みパッケージ
+    patterns:
+      - /組み?込み?パッケージ/
+      - /[Ee]mbedded ?[Pp]ackages?/
+  - expected: ローカルパッケージ
+    patterns:
+      - ローカル・パッケージ
+      - /[Ll]ocal ?[Pp]ackages?/
+  - expected: OpenUPM
+    pattern:  /[Oo]pen ?[Uu][Pp][Mm]/
+  - expected: UniTask
+  - expected: UniRx
+  - expected: MonoBehaviour
+    pattern:  /[Mm]ono ?[Bb]ehaviou?r/
+  - expected: uGUI
+  - expected: Edit Modeテスト
+    patterns:
+      - /エディット・?モード・?テスト/
+      - /編集モード・?テスト/
+      - /エディター?・?テスト/
+      - /[Ee]dit ?[Mm]ode[ ・]?([Tt]ests?|テスト)/
+      - /[Ee]ditor[ ・]?([Tt]ests?|テスト)/
+    prh: Unity User Manualの用語集に準ずると「編集モードテスト」になるが、一般的な「Edit Modeテスト」に統一する
+    # Unityエディターの状態としては「編集モード」を採用。あとでルール追加する
+  - expected: Play Modeテスト
+    patterns:
+      - /プレイ・?モード・?テスト/
+      - /再生モード・?テスト/
+      - /[Pp]lay ?[Mm]ode[ ・]?([Tt]ests?|テスト)/
+    prh: Unity User Manualの用語集に準ずると「再生モードテスト」になるが、一般的な「Play Modeテスト」に統一する
+    # Unityエディターの状態としては「再生モード」を採用。あとでルール追加する
+  - expected: プレイヤー
+    patterns:
+      - /プレイヤ(?!ー)/
+      - /[Pp]layer/
+  - expected: カテゴリー
+    patterns:
+      - /カテゴリ(?!ー)/
+      - /[Cc]ategory(?!(属性))/
+  - expected: IL2CPP
+  - expected: Mono
+  - expected: iOS
+  - expected: Xcode
+  - expected: App Store
+    pattern:  /[Aa]pp ?[Ss]tore/
+  - expected: Android
+  - expected: Gradle
+  - expected: Google Play
+    pattern:  /[Gg]oogle ?[Pp]lay/
+  - expected: macOS
+    pattern:  /[Mm]ac(OS|os)?X?/
+  - expected: Windows
+  - expected: WebGL
+  - expected: Linux

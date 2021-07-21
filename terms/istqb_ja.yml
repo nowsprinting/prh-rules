@@ -1,0 +1,132 @@
+# Rules for ISTQB日本語版
+# 原則として、ISTQB ソフトウェア標準用語集 日本語版 Ver 3.2（FL2018対応） http://jstqb.jp/syllabus.html の訳語に準じます
+# ただし、「テスタビリティ」など、十分に一般的と判断できる用語はカタカナ表記を採択しています
+
+meta:
+  reviewer:
+    - nowsprinting
+  rules:   https://github.com/prh/rules
+
+version: 1
+rules:
+  - expected: メトリック
+    patterns:
+      - /メトリクッ?ス/
+      - /[Mm]etrics?/
+  - expected: カバレッジ
+    patterns:
+      - カバレジ
+  - expected: ユニットテスト
+    patterns:
+      - 単体テスト
+      - ユニット・テスト
+      - /[Uu]nit[ ・]?([Tt]est(s|ing)?|テスト)/
+    specs:
+      - from: unittest
+        to:   ユニットテスト
+      - from: Unit Tests
+        to:   ユニットテスト
+      - from: Unit Testing
+        to:   ユニットテスト
+      - from: Unitテスト
+        to:   ユニットテスト
+      - from: Unit・テスト
+        to:   ユニットテスト
+      - from: ユニット・テスト
+        to:   ユニットテスト
+  - expected: 統合テスト
+    patterns:
+      - 結合テスト
+      - /インテグレーション・?テスト/
+      - /[Ii]ntegration[ ・]?([Tt]est(s|ing)?|テスト)/
+  - expected: 受け入れテスト
+    patterns:
+      - /受け?入れ?テスト/
+      - /アクセプタンス・?テスト/
+      - /[Aa]cceptance[ ・]?([Tt]est(s|ing)?|テスト)/
+  - expected: エクストリームプログラミング
+    patterns:
+      - /エクストリーム・?プログラミング/
+  - expected: 機能テスト
+    patterns:
+      - 単機能テスト
+    prh: 単機能テストという言葉は定義されておらず、恐らく近いのは機能テストです。ユニットテスト（単体テスト）と混同しないでください
+  - expected: 負荷テスト
+    patterns:
+      - /ロード・?テスト/
+      - /[Ll]oad[ ・]?([Tt]est(s|ing)?|テスト)/
+  - expected: 性能テスト
+    patterns:
+      - /パフォーマンス・?テスト/
+      - /[Pp]erformance[ ・]?([Tt]est(s|ing)?|テスト)/
+  - expected: リグレッションテスト
+    patterns:
+      - 回帰テスト
+      - 退行テスト
+      - リグレッション・テスト
+      - /[Rr]egression[ ・]?([Tt]est(s|ing)?|テスト)/
+  - expected: リグレッション
+    patterns:
+      - /デグレ(ード|ーション)?/
+      - /エン(ハンス)?・?バグ/
+    specs:
+      - from: デグレード
+        to:   リグレッション
+      - from: エンバグ
+        to:   リグレッション
+  - expected: 移植性
+    patterns:
+      - ポータビリティ
+      - /[Pp]ortability/
+  - expected: 頑健性
+    patterns:
+      - 堅牢性
+      - ロバストネス
+      - /[Rr]obustness/
+  - expected: テスタビリティ
+    patterns:
+      - 試験性
+      - テスト性
+      - テスト容易性
+      - テスタビリティー
+      - /[Tt]estability/
+    prh: ISTQBでは「試験性」が採択されていますが、「テスタビリティ」は十分に一般的なので本書ではこちらを使用します
+  - expected: テスト容易化要件
+    patterns:
+      - /[Tt]estable ?[Rr]equirement/
+  - expected: 理解性
+    patterns:
+      - /[Uu]nderstandability/
+  - expected: ユーザビリティ
+    patterns:
+      - 使用性
+      - ユーザビリティー
+      - /[Uu]sability/
+    prh: ISTQBでは「使用性」が採択されていますが、「ユーザビリティ」は十分に一般的なので本書ではこちらを使用します
+  - expected: 静的解析
+    patterns:
+      - /[Ss]tatic ?[Aa]nalysis/
+      - 性的解析
+  - expected: テスト自動化
+    patterns:
+      - /[Tt]est ?[Aa]utomation/
+  - expected: テスト$1
+    patterns:
+      - /テスト・(ケース|スイート|ハーネス|レベル|タイプ|オラクル)/g
+    specs:
+      - from: テスト・ケース
+        to:   テストケース
+  - expected: サイクロマティック複雑度
+    patterns:
+      - /サイクロマ(ティ|チ)ック・?複雑度/
+      - 循環的複雑度
+      - McCabe(の複雑度|数)
+      - /[Cc]yclomatic ?[Cc]omplexity/
+  - expected: コグニティブ複雑度 # ISTQB日本語版に記載のない単語ですが、便宜上ここに定義しています
+    patterns:
+      - /コグニ(ティ|チ)ブ・?複雑度/
+      - 認知的複雑度
+      - /[Cc]ognitive ?[Cc]omplexity/
+    specs:
+      - from: 認知的複雑度
+        to:   コグニティブ複雑度
