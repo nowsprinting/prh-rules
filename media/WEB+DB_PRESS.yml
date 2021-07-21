@@ -1679,6 +1679,8 @@ rules:
   - expected: $1Web$2
     pattern:  /(?:([^/])ウェブ)|(?:ウェブ([^/\+]))/
   - expected: $1Web$2
+    pattern:  /(?:([^/])\bWEB)|(?:WEB\b([^/\+]))/
+  - expected: $1Web$2
     pattern:  /(?:([^/])ウェッブ)|(?:ウェッブ([^/\+]))/
   - expected: O/Rマッ
     pattern:  /ORマッ|O-Rマッ/
