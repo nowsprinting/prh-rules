@@ -1,5 +1,22 @@
 # A collection of prh rules
 
+[![Test](https://github.com/nowsprinting/prh-rules/actions/workflows/test.yml/badge.svg)](https://github.com/nowsprinting/prh-rules/actions/workflows/test.yml)
+
+
+## upstreamとの差分
+
+以下のルールを追加しています
+
+* media
+    * ikagoya.yml（techbooster.ymlをベースに、下記termsに追加したファイルをインポートしています）
+* terms
+    * csharp.yml
+    * unity.yml
+    * jetbrains.yml
+    * istqb_ja.yml
+    * xutp.yml
+
+
 ## フォルダ構成
 
 * languages
@@ -12,6 +29,7 @@
     * 各媒体固有のルール
 * files
     * 各ファイルタイプ毎のinclude, excludeの設定
+
 
 ## ルール
 
