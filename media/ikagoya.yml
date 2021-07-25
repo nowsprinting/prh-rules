@@ -1,13 +1,14 @@
-# Rules for TechBooster
+# Rules for Ikagoya, based on TechBooster
+#
+# techbooster.ymlをベースに、以下のtermsを追加インポートしています
+# C#, Unity, JetBrains, ISTQB日本語版, xUTP
+#
 meta:
   reviewer:
-    - vvakame
-    - mhidaka
-  related: http://techbooster.org/
+    - nowsprinting
+  related: https://www.nowsprinting.com/
   rules:   https://github.com/prh/rules
 
-# techbooster editor lint!!
-# C89 冬コミ開始前時点で利用している版だよ！
 version: 1
 imports:
   - ../languages/ja/typo.yml
@@ -16,6 +17,11 @@ imports:
   - ../terms/software.yml
   - ../terms/review.yml
   - ../terms/trademark.yml
+  - ../terms/csharp.yml
+  - ../terms/unity.yml
+  - ../terms/jetbrains.yml
+  - ../terms/istqb_ja.yml
+  - ../terms/xutp.yml
 rules:
   - expected: TechBooster
     pattern: てっくぶーすたー
@@ -342,8 +348,8 @@ rules:
     pattern:  引き数
   - expected: おおむね
     pattern:  概ね
-  - expected: パラメータ
-    pattern:  パラメーター
+  # - expected: パラメータ
+  #   pattern:  パラメーター
   - expected: 仕組み
     pattern:  しくみ
   - expected: そう
