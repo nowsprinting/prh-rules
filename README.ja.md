@@ -11,11 +11,25 @@
     * ikagoya.yml（techbooster.ymlをベースに、下記termsに追加したファイルをインポートしています）
 * terms
     * csharp.yml
-    * unity.yml
-    * jetbrains.yml
     * istqb_ja.yml
+    * jetbrains.yml
+    * unity.yml
     * xutp.yml
 
+
+## 推奨allow.yml
+
+[textlint-filter-rule-allowlist](https://github.com/textlint/textlint-filter-rule-allowlist)を使用して、次のワードを無視するよう設定することを推奨します。
+
+```
+- /https?://[\w!\?/\+\-_~=;\.,\*&@#\$%\(\)'\[\]]+/  # URL内はcase sensitiveにしない
+- パラメタライズドテスト  # /パラメーター?/に抵触してしまうため
+
+# ファイル名の拡張子として小文字表記を認める
+- .html
+- .json
+- .unity
+```
 
 ## フォルダ構成
 
