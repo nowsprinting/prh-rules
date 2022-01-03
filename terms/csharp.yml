@@ -9,7 +9,6 @@ meta:
 version: 1
 rules:
   - expected: .NET
-    pattern:  /\.[Nn][Ee][Tt]/
   - expected: NUnit
   - expected: NSubstitute
   - expected: NuGet

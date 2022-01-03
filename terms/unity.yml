@@ -90,18 +90,34 @@ rules:
       - /[Ee]dit ?[Mm]ode[ ・]?([Tt]ests?|テスト)/
       - /[Ee]ditor[ ・]?([Tt]ests?|テスト)/
     prh: Unity User Manualの用語集に準ずると「編集モードテスト」になるが、一般的な「Edit Modeテスト」に統一する
-    # Unityエディターの状態としては「編集モード」を採用。あとでルール追加する
   - expected: Play Modeテスト
     patterns:
       - /プレイ・?モード・?テスト/
       - /再生モード・?テスト/
       - /[Pp]lay ?[Mm]ode[ ・]?([Tt]ests?|テスト)/
     prh: Unity User Manualの用語集に準ずると「再生モードテスト」になるが、一般的な「Play Modeテスト」に統一する
-    # Unityエディターの状態としては「再生モード」を採用。あとでルール追加する
+  - expected: 編集モード
+    patterns:
+      - /エディット・?モード・?(?!テスト)/
+      - /編集モード・?(?!テスト)/
+      - /エディター?・?(?!テスト)/
+      - /[Ee]dit ?[Mm]ode[ ・]?(?![Tt]ests?|テスト)/
+      - /[Ee]ditor[ ・]?(?![Tt]ests?|テスト)/
+    prh: 「テスト」が付かない場合はUnity User Manualの用語集に準じて「編集モード」とします
+  - expected: 再生モード
+    patterns:
+      - /プレイ・?モード・?(?!テスト)/
+      - /再生モード・?(?!テスト)/
+      - /[Pp]lay ?[Mm]ode[ ・]?(?![Tt]ests?|テスト)/
+    prh: 「テスト」が付かない場合はUnity User Manualの用語集に準じて「再生モード」とします
   - expected: プレイヤー
     patterns:
       - /プレイヤ(?!ー)/
       - /[Pp]layer/
+  - expected: スタンドアロンプレイヤー
+    patterns:
+      - /スタンドアロー?ン・?プレイヤ(?!ー)/
+      - /[Ss]tandalone ?[Pp]layer/
   - expected: カテゴリー
     patterns:
       - /カテゴリ(?!ー)/
@@ -121,3 +137,5 @@ rules:
   - expected: Windows
   - expected: WebGL
   - expected: Linux
+  - expected: Automated QA
+    pattern: /[Aa]utomated ?[Qq][Aa]/

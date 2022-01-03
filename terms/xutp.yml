@@ -10,7 +10,7 @@ meta:
 
 version: 1
 rules:
-  - expected: パラメタライズドテスト
+  - expected: パラメタライズドテスト    # ただし/パラメーター?/に抵触してしまうため、textlint-filter-rule-allowlistで除外すべき
     patterns:
       - /パラメー?ター?ライズド?・?テスト/
       - /parameterized tests?/
