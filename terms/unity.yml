@@ -28,6 +28,10 @@ rules:
     patterns:
       - /[Gg]ame ?[Oo]bjects?/
       - /ゲーム・?オブジェクト/
+  - expected: ScriptableObject
+    patterns:
+      - /[Ss]criptable ?[Oo]bjects?/
+      - /スクリプタブル・?オブジェクト/
   - expected: ヒエラルキー
     pattern:
       - /ヒエラルキ(?!ー)/
