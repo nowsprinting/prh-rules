@@ -135,3 +135,7 @@ rules:
   - expected: Linux
   - expected: Automated QA
     pattern: /[Aa]utomated ?[Qq][Aa]/
+  - expected: Recorded Playback
+    patterns:
+      - /[Rr]ecord [Pp]layback/
+      - /[Rr]ecording [Pp]layback/
