@@ -24,6 +24,13 @@ rules:
   - expected: Prefab
     pattern:  /プレ(ハ|ファ)ブ/
   - expected: Asset # 一般的な言葉としてカタカナ表記を使用するケースもありそうなのでキャピタライズのみ
+  - expected: GameObject
+    patterns:
+      - /[Gg]ame ?[Oo]bjects?/
+      - /ゲーム・?オブジェクト/
+  - expected: ヒエラルキー
+    pattern:
+      - /ヒエラルキ(?!ー)/
   - expected: Sceneビュー
     pattern:  /([Ss]cene|シーン)[ ・]?([Vv]iew|[Ww]indow|ビュー|ウ[イィ]ンド[ウゥー])/
     specs:
