@@ -35,6 +35,9 @@ rules:
   - expected: ヒエラルキー
     pattern:
       - /ヒエラルキ(?!ー)/
+    specs:
+      - from: ヒエラルキ
+        to:   ヒエラルキー
   - expected: Sceneビュー
     pattern:  /([Ss]cene|シーン)[ ・]?([Vv]iew|[Ww]indow|ビュー|ウ[イィ]ンド[ウゥー])/
     specs:
@@ -112,23 +115,66 @@ rules:
       - /エディット・?モード・?(?!テスト)/
       - /[Ee]dit ?[Mm]ode[ ・]?(?![Tt]ests?|テスト)/
     prh: 「テスト」が付かない場合はUnity User Manualの用語集に準じて「編集モード」とします
+    specs:
+      - from: エディットモード
+        to:   編集モード
+      - from: エディット・モード
+        to:   編集モード
+      - from: Edit Mode
+        to:   編集モード
+      - from: EditMode
+        to:   編集モード
+      - from: Edit Modeテスト
+        to:   Edit Modeテスト
   - expected: 再生モード
     patterns:
       - /プレイ・?モード・?(?!テスト)/
       - /[Pp]lay ?[Mm]ode[ ・]?(?![Tt]ests?|テスト)/
     prh: 「テスト」が付かない場合はUnity User Manualの用語集に準じて「再生モード」とします
+    specs:
+      - from: プレイモード
+        to:   再生モード
+      - from: プレイ・モード
+        to:   再生モード
+      - from: Play Mode
+        to:   再生モード
+      - from: PlayMode
+        to:   再生モード
+      - from: Play Modeテスト
+        to:   Play Modeテスト
   - expected: プレイヤー
     patterns:
-      - /プレイヤ(?!ー)/
+      - /プレ[イー]ヤ(?!ー)/
       - /[Pp]layer/
+    prh: 「プレイヤー」単体で使うのは「ゲームをプレイする人」の意。スタンドアロンプラットフォーム（macOS, Windows, iOS, Androidなど）向けのプレイヤーは「スタンドアロンプレイヤー」を使うこと。「プレイヤー設定」「プレイヤー実行」はセーフ # TODO: ルール化したい
   - expected: スタンドアロンプレイヤー
     patterns:
-      - /スタンドアロー?ン・?プレイヤ(?!ー)/
+      - /スタン(ドア|ダ)ロー?ン・?プレ[イー]ヤー?/
       - /[Ss]tandalone ?[Pp]layer/
+    specs:
+      - from: スタンドアロン・プレイヤー
+        to:   スタンドアロンプレイヤー
+      - from: スタンドアローンプレイヤー
+        to:   スタンドアロンプレイヤー
+      - from: スタンダローンプレイヤー
+        to:   スタンドアロンプレイヤー
+      - from: スタンダロンプレイヤー
+        to:   スタンドアロンプレイヤー
+      - from: スタンダロンプレイヤ
+        to:   スタンドアロンプレイヤー
+      - from: スタンダロンプレーヤー
+        to:   スタンドアロンプレイヤー
   - expected: カテゴリー
     patterns:
       - /カテゴリ(?!ー)/
       - /[Cc]ategory(?!(属性))/
+    specs:
+      - from: カテゴリ
+        to:   カテゴリー
+      - from: Category
+        to:   カテゴリー
+      - from: Category属性
+        to:   Category属性
   - expected: IL2CPP
   - expected: Mono
   - expected: iOS
