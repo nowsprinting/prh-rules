@@ -140,7 +140,17 @@ rules:
   - expected: Google Play
     pattern:  /[Gg]oogle ?[Pp]lay/
   - expected: macOS
-    pattern:  /[Mm]ac(OS|os)?X?/
+    patterns:
+      - /[Mm]ac ?(OS|os)?X?/
+      - /[Mm]ac/
+      - /[Oo][Ss][Xx]/
+    specs:
+      - from: Mac OSX
+        to:   macOS
+      - from: MacOSX
+        to:   macOS
+      - from: OSX
+        to:   macOS
   - expected: Windows
   - expected: WebGL
   - expected: Linux
