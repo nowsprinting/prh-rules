@@ -23,6 +23,9 @@ imports:
   - ../terms/istqb_ja.yml
   - ../terms/xutp.yml
 rules:
+  - expected: いか小屋
+    pattern: /(イカ|烏賊)小屋/
+    prh: 「いか」はひらがな（『いかレスラー』と同じ）
   - expected: TechBooster
     pattern: てっくぶーすたー
     prh: 警告メッセージのカスタマイズができるよ！
@@ -366,3 +369,16 @@ rules:
   - expected: コード補完
     pattern:  コード保管
     prh: コード補完の間違いと思われます。
+  - expected: 擬似乱数
+    patterns:
+      - /(擬似)?乱数/
+      - /疑似乱数/
+    regexpMustEmpty: $1
+    prh: 概ね「擬似」なのに「擬似」を忘れると刺されます。また「疑」でなく手偏の「擬」です
+    specs:
+      - from: 擬似乱数
+        to:   擬似乱数
+      - from: 疑似乱数
+        to:   擬似乱数
+      - from: 乱数
+        to:   擬似乱数
