@@ -81,13 +81,15 @@ rules:
         to:   UPMパッケージ
       - from: upm パッケージ
         to:   UPMパッケージ
-  - expected: 組み込みパッケージ
+  - expected: 埋め込みパッケージ
     patterns:
+      - /埋め?込み?パッケージ/
       - /組み?込み?パッケージ/
       - /[Ee]mbedded ?[Pp]ackages?/
+    prh: 「埋め込み」と訳された。See https://docs.unity3d.com/ja/2022.1/Manual/CustomPackages.html
   - expected: ローカルパッケージ
     patterns:
-      - ローカル・パッケージ
+      - /ローカル・?パッケージ/
       - /[Ll]ocal ?[Pp]ackages?/
   - expected: OpenUPM
     pattern:  /[Oo]pen ?[Uu][Pp][Mm]/
