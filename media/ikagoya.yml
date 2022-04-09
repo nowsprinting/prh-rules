@@ -382,3 +382,9 @@ rules:
         to:   擬似乱数
       - from: 乱数
         to:   擬似乱数
+  - expected: リポジトリ
+    patterns:
+      - /[リレ]ポジトリー?/
+    specs:
+      - from: レポジトリー
+        to:   リポジトリ
