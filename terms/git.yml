@@ -1,0 +1,23 @@
+# Rules for Git
+
+meta:
+  reviewer:
+    - nowsprinting
+  rules:   https://github.com/prh/rules
+
+version: 1
+rules:
+  - expected: リポジトリ
+    patterns:
+      - /[リレ]ポジトリー?/
+    specs:
+      - from: レポジトリー
+        to:   リポジトリ
+  - expected: デフォルトブランチ
+    patterns:
+      - /master(ブランチ)?/
+    specs:
+      - from: master
+        to:   デフォルトブランチ
+      - from: masterブランチ
+        to:   デフォルトブランチ

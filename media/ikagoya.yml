@@ -22,6 +22,7 @@ imports:
   - ../terms/jetbrains.yml
   - ../terms/istqb_ja.yml
   - ../terms/xutp.yml
+  - ../terms/git.yml
 rules:
   - expected: いか小屋
     pattern: /(イカ|烏賊)小屋/
@@ -382,9 +383,3 @@ rules:
         to:   擬似乱数
       - from: 乱数
         to:   擬似乱数
-  - expected: リポジトリ
-    patterns:
-      - /[リレ]ポジトリー?/
-    specs:
-      - from: レポジトリー
-        to:   リポジトリ
