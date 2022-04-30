@@ -12,8 +12,8 @@ rules:
   - expected: IntelliJ
   - expected: IDEA
   - expected: Rider
-
-# - expected: 重大度 # Microsoft公式と訳が異なるので採用しない。see: csharp.yml
-#   patterns:
-#     - 重要度
-#     - /[Ss]everity/
+  - expected: 重大度
+    patterns:
+      - 重要度  # Microsoft公式での訳語。see: csharp.yml
+      - /[Ss]everity/
+    prh: アナライザーのSeverityのJetBrains公式訳。Microsoft公式では「重要度」だがこちらを採用

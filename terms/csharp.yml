@@ -20,10 +20,10 @@ rules:
       - /アナライザ(?!ー)/
       - 解析器
       - /[Aa]nalyzer/
-  - expected: 重要度
-    patterns:
-      - 重大度  # JetBrains公式ではこちら。重要度で統一するため採択しない。see: jetbrains.yml
-      - /[Ss]everity/
+  # - expected: 重要度
+  #   patterns:
+  #     - 重大度  # JetBrains公式での訳語。see: jetbrains.yml
+  #     - /[Ss]everity/
   - expected: 属性
     patterns:
       - アトリビュート
