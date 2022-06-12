@@ -208,3 +208,6 @@ rules:
     patterns:
       - /[Rr]ecord [Pp]layback/
       - /[Rr]ecording [Pp]layback/
+  - expected: Airtest
+  - expected: Poco
+  - expected: NetEase
