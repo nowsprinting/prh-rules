@@ -92,7 +92,14 @@ rules:
       - /ローカル・?パッケージ/
       - /[Ll]ocal ?[Pp]ackages?/
   - expected: OpenUPM
-    pattern:  /[Oo]pen ?[Uu][Pp][Mm]/
+    pattern:  /[Oo]pen ?[Uu][Pp][Mm](?!.com)/
+    specs:
+      - from: openupm
+        to:   OpenUPM
+      - from: open upm
+        to:   OpenUPM
+      - from: openupm.com
+        to:   openupm.com
   - expected: UniTask
   - expected: UniRx
   - expected: MonoBehaviour
