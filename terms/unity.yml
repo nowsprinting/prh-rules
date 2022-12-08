@@ -184,6 +184,24 @@ rules:
         to:   カテゴリー
       - from: Category属性
         to:   Category属性
+  - expected: UI要素
+    patterns:
+      - UI elements?
+      - UIエレメント
+      - UIコンポーネント
+    prh: Unityマニュアル日本語訳に従う。表記ゆれはあるが。
+  - expected: ビジュアルコンポーネント
+    prh: Text, Image, Raw Image, Mask, Effect
+  - expected: インタラクションコンポーネント
+    prh: Selectable, Button, Toggle, Toggle Group, Slider, Scrollbar, Dropdown, Input Field, Scroll Rect (Scroll View)
+  - expected: 3D要素
+    patterns:
+      - 3D physics elements?
+      - 3Dオブジェクト
+  - expected: 2D要素
+    patterns:
+      - 2D physics elements?
+      - 2Dオブジェクト
   - expected: IL2CPP
   - expected: Mono
   - expected: iOS
