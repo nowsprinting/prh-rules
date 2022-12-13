@@ -45,3 +45,14 @@ rules:
     patterns:
       - /ネーム・?スペース/
       - /[Nn]ame[Ss]pace/
+  - expected: インターフェイス
+    patterns:
+      - /インター?フェ[ーイ]ス/
+    specs:
+      - from: インターフェース
+        to:   インターフェイス
+      - from: インタフェース
+        to:   インターフェイス
+      - from: インタフェイス
+        to:   インターフェイス
+    prh: Unityマニュアル日本語訳では「インターフェース」だが
