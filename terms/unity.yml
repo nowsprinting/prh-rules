@@ -176,7 +176,7 @@ rules:
   - expected: カテゴリー
     patterns:
       - /カテゴリ(?!ー)/
-      - /[Cc]ategory(?!(属性))/
+      - /[Cc]ategory(?!(属性|アトリビュート|Attribute))/
     specs:
       - from: カテゴリ
         to:   カテゴリー
@@ -184,9 +184,12 @@ rules:
         to:   カテゴリー
       - from: Category属性
         to:   Category属性
+      - from: Categoryアトリビュート
+        to:   Categoryアトリビュート
+      - from: CategoryAttribute
+        to:   CategoryAttribute
   - expected: UI要素
     patterns:
-      - UI elements?
       - UIエレメント
       - UIコンポーネント
     prh: Unityマニュアル日本語訳に従う。表記ゆれはあるが。
@@ -196,12 +199,18 @@ rules:
     prh: Selectable, Button, Toggle, Toggle Group, Slider, Scrollbar, Dropdown, Input Field, Scroll Rect (Scroll View)
   - expected: 3D要素
     patterns:
-      - 3D physics elements?
+      - /3D physics elements?/
+      - 3Dエレメント
+      - 3Dコンポーネント
       - 3Dオブジェクト
+    prh: Unityマニュアル日本語訳に従う。表記ゆれはあるが。
   - expected: 2D要素
     patterns:
-      - 2D physics elements?
+      - /2D physics elements?/
+      - 2Dエレメント
+      - 2Dコンポーネント
       - 2Dオブジェクト
+    prh: Unityマニュアル日本語訳に従う。表記ゆれはあるが。
   - expected: IL2CPP
   - expected: Mono
   - expected: iOS
