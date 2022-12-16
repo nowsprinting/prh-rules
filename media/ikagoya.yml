@@ -370,3 +370,5 @@ rules:
   - expected: コード補完
     pattern:  コード保管
     prh: コード補完の間違いと思われます。
+  - expected: 操作対象
+    pattern:  捜査対象
