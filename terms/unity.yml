@@ -91,6 +91,29 @@ rules:
     patterns:
       - /ローカル・?パッケージ/
       - /[Ll]ocal ?[Pp]ackages?/
+  - expected: ネイティブプラグイン
+    patterns:
+      - /ネイティブ・?(プラグイン|ライブラリー?)/
+      - /[Nn]ative ?([Pp]lugins?|[Ll]ibrary|[Ll]ibraries)/
+    specs:
+      - from: ネイティブ・プラグイン
+        to:   ネイティブプラグイン
+      - from: ネイティブライブラリ
+        to:   ネイティブプラグイン
+      - from: ネイティブライブラリー
+        to:   ネイティブプラグイン
+      - from: Native Plugin
+        to:   ネイティブプラグイン
+      - from: native plugin
+        to:   ネイティブプラグイン
+      - from: native plugins
+        to:   ネイティブプラグイン
+      - from: Native Library
+        to:   ネイティブプラグイン
+      - from: native library
+        to:   ネイティブプラグイン
+      - from: native libraries
+        to:   ネイティブプラグイン
   - expected: OpenUPM
     pattern:  /[Oo]pen ?[Uu][Pp][Mm](?!.com)/
     specs:
