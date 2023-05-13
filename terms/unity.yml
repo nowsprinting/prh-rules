@@ -237,6 +237,20 @@ rules:
   - expected: バッチモード
     patterns:
       - /[Bb]atch ?[Mm]ode/
+  - expected: GraphicRaycaster
+    patterns:
+      - /[Gg]raphics?[Rr]aycast[eo]r/
+    specs:
+      - from: GraphicsRaycaster
+        to:   GraphicRaycaster
+      - from: GraphicRaycastor
+        to:   GraphicRaycaster
+  - expected: nographics
+    patterns:
+      - /nographics?/
+    specs:
+      - from: nographic
+        to:   nographics
   - expected: IL2CPP
   - expected: Mono
   - expected: iOS
