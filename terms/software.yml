@@ -23,3 +23,11 @@ rules:
         to:   擬似乱数
       - from: 乱数
         to:   擬似乱数
+  - expected: 擬似乱数生成器
+    patterns:
+      - /擬似乱数(生成|発生)[器機]/
+    specs:
+      - from: 擬似乱数発生器
+        to:   擬似乱数生成器
+      - from: 擬似乱数生成機
+        to:   擬似乱数生成器
