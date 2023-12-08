@@ -17,3 +17,4 @@ rules:
       - 重要度  # Microsoft公式での訳語。see: csharp.yml
       - /[Ss]everity/
     prh: アナライザーのSeverityのJetBrains公式訳。Microsoft公式では「重要度」だがこちらを採用
+  - expected: AI Assistant
