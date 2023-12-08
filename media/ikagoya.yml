@@ -23,6 +23,7 @@ imports:
   - ../terms/istqb_ja.yml
   - ../terms/xutp.yml
   - ../terms/git.yml
+  - ../terms/github.yml
 rules:
   - expected: いか小屋
     pattern: /(イカ|烏賊)小屋/

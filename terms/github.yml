@@ -1,0 +1,13 @@
+# Rules for GitHub
+
+meta:
+  reviewer:
+    - nowsprinting
+  rules:   https://github.com/prh/rules
+
+version: 1
+rules:
+  - expected: GitHub
+  - expected: GitHub Copilot
+  - expected: Copilot
+  - expected: Copilot Chat
