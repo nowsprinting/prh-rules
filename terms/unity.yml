@@ -10,6 +10,15 @@ meta:
 version: 1
 rules:
   - expected: Unity
+    pattern: /([Cc]omm)?unity/
+    regexpMustEmpty: $1
+    specs:
+      - from: unity
+        to:   Unity
+      - from: Community
+        to:   Community
+      - from: community
+        to:   community
   - expected: エディター
     patterns:
       - /エディタ(?!ー)/
