@@ -18,3 +18,7 @@ rules:
       - /[Ss]everity/
     prh: アナライザーのSeverityのJetBrains公式訳。Microsoft公式では「重要度」だがこちらを採用
   - expected: AI Assistant
+  - expected: キャレット
+    patterns:
+      - カーソル
+    prh: 初出箇所で「キャレット（文字入力カーソル）」と説明
