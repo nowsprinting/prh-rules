@@ -24,13 +24,20 @@ imports:
   - ../terms/xutp.yml
   - ../terms/git.yml
   - ../terms/github.yml
+
 rules:
   - expected: いか小屋
     pattern: /(イカ|烏賊)小屋/
     prh: 「いか」はひらがな（『いかレスラー』と同じ）
+  - expected: 再生成
+    pattern: 再生性
+  - expected: 現状
+    pattern: 原状
+
   - expected: TechBooster
     pattern: てっくぶーすたー
     prh: 警告メッセージのカスタマイズができるよ！
+
   # 記号
   # 半角括弧を全角括弧に
   - expected: （$1）
