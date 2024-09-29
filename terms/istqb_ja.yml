@@ -90,7 +90,7 @@ rules:
       - テスト容易性
       - テスタビリティー
       - /[Tt]estability/
-    prh: ISTQBでは「試験性」が採択されていますが、「テスタビリティ」は十分に一般的なので本書ではこちらを使用します
+    prh: ISTQB日本語版では「試験性」が採択されていますが、「テスタビリティ」は十分に一般的なので本書ではこちらを使用します
   - expected: テスト容易化要件
     patterns:
       - /[Tt]estable ?[Rr]equirement/
@@ -102,7 +102,7 @@ rules:
       - 使用性
       - ユーザビリティー
       - /[Uu]sability/
-    prh: ISTQBでは「使用性」が採択されていますが、「ユーザビリティ」は十分に一般的なので本書ではこちらを使用します
+    prh: ISTQB日本語版では「使用性」が採択されていますが、「ユーザビリティ」は十分に一般的なので本書ではこちらを使用します
   - expected: 静的解析
     patterns:
       - /[Ss]tatic ?[Aa]nalysis/
@@ -122,7 +122,7 @@ rules:
       - 循環的複雑度
       - McCabe(の複雑度|数)
       - /[Cc]yclomatic ?[Cc]omplexity/
-  - expected: コグニティブ複雑度 # ISTQB日本語版に記載のない単語ですが、便宜上ここに定義しています
+  - expected: コグニティブ複雑度
     patterns:
       - /コグニ(ティ|チ)ブ・?複雑度/
       - 認知的複雑度
@@ -130,3 +130,7 @@ rules:
     specs:
       - from: 認知的複雑度
         to:   コグニティブ複雑度
+    prh: ISTQB日本語版に記載のない単語ですが、便宜上ここに定義しています
+  - expected: 手動テスト
+    patterns:
+      - マニュアルテスト
