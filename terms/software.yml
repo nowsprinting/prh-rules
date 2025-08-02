@@ -41,3 +41,7 @@ rules:
         to:   イテレーティブ開発
       - from: イテレーション開発
         to:   イテレーティブ開発
+  - expected: 静的
+    patterns:
+      - スタティック
+      - 性的

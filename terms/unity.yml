@@ -209,6 +209,11 @@ rules:
       - from: スタンダロンプレーヤー
         to:   スタンドアロンプレイヤー
     prh: ランタイムプラットフォームのうち、macOS, Windows, Linux
+  - expected: プレイヤーループ
+    patterns:
+      - /プレ[イー]ヤー?・?ループ/
+      - /メイン・?ループ/
+      - /ゲーム・?ループ/
   - expected: カテゴリー
     patterns:
       - /カテゴリ(?!ー)/

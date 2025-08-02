@@ -1,0 +1,15 @@
+# Rules for Game dev
+
+meta:
+  reviewer:
+    - nowsprinting
+  rules:   https://github.com/prh/rules
+
+version: 1
+rules:
+  - expected: ゲーム本体側のコード
+    patterns:
+      - /プロダクト・?側?の?コード/
+      - /プロダクション・?側?の?コード/
+      - /ゲームタイトル・?側?の?コード/
+    prh: もしくは「ゲーム本体のコード」でも可。「プロダクト」は原則使わない。「ゲームタイトル」は言葉としては使うがこの文脈では使わない

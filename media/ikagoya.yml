@@ -13,17 +13,18 @@ version: 1
 imports:
   - ../languages/ja/typo.yml
   - ../terms/android.yml
-  - ../terms/javascript.yml
-  - ../terms/software.yml
-  - ../terms/review.yml
-  - ../terms/trademark.yml
   - ../terms/csharp.yml
-  - ../terms/unity.yml
-  - ../terms/jetbrains.yml
-  - ../terms/istqb_ja.yml
-  - ../terms/xutp.yml
+  - ../terms/gamedev.yml
   - ../terms/git.yml
   - ../terms/github.yml
+  - ../terms/istqb_ja.yml
+  - ../terms/javascript.yml
+  - ../terms/jetbrains.yml
+  - ../terms/review.yml
+  - ../terms/software.yml
+  - ../terms/trademark.yml
+  - ../terms/unity.yml
+  - ../terms/xutp.yml
 
 rules:
   - expected: いか小屋
