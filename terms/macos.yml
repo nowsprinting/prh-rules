@@ -1,0 +1,32 @@
+# Rules for macOS
+# ショートカットに使うキーの名称など。フルスペル小文字とする
+
+meta:
+  reviewer:
+    - nowsprinting
+  rules:   https://github.com/prh/rules
+
+version: 1
+rules:
+  - expected: command
+    patterns:
+      - /[Cc]ommand/
+      - /[Cc]md/
+      - ⌘
+  - expected: option
+    patterns:
+      - /[Oo]ption/
+      - /[Aa]lt/
+      - ⌥
+    prh: Windowsでは alt が正しい
+  - expected: control
+    patterns:
+      - /[Cc]ontrol/
+      - /[Cc]trl/
+      - ⌃
+  - expected: shift
+    patterns:
+      - /[Ss]hift/
+      - ⇧
+  - expected: enter
+  - expected: esc

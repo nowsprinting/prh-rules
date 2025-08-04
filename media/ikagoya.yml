@@ -20,6 +20,7 @@ imports:
   - ../terms/istqb_ja.yml
   - ../terms/javascript.yml
   - ../terms/jetbrains.yml
+  - ../terms/macos.yml
   - ../terms/review.yml
   - ../terms/software.yml
   - ../terms/trademark.yml
