@@ -28,6 +28,15 @@ rules:
     patterns:
       - アトリビュート
       - /[Aa]ttribute/
+  - expected: 配置
+    patterns:
+      - 付与
+      - 付ける
+    specs:
+      - from: 属性を付与
+        to:   属性を配置
+      - from: 属性をメソッドに付ける
+        to:   属性をメソッドに配置
   - expected: Visual Studio
     pattern:  /[Vv]isual ?[Ss]tudio/
   - expected: VS Code # 正式には "Visual Studio Code"
