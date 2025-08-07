@@ -18,7 +18,7 @@ rules:
       - /[Oo]ption/
       - /[Aa]lt/
       - ⌥
-    prh: Windowsでは alt が正しい
+    prh: Windowsでは Alt が正しい
   - expected: control
     patterns:
       - /[Cc]ontrol/
@@ -29,4 +29,18 @@ rules:
       - /[Ss]hift/
       - ⇧
   - expected: enter
+    patterns:
+      - /[Ee]nter/
+      - /(yield )?[Rr]eturn/
+      - ↩
+    regexpMustEmpty: $1
+    specs:
+      - from: Return
+        to:   enter
+      - from: yield return
+        to:   yield return
+    prh: 本当はmacOSでは return が正しいけれど慣習に従う
   - expected: esc
+    patterns:
+      - /[Ee]sc/
+      - ⎋
