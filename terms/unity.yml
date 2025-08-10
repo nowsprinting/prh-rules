@@ -303,3 +303,11 @@ rules:
   - expected: Airtest
   - expected: Poco
   - expected: NetEase
+  - expected: アセンブリ定義ファイル
+    pattern:  /[Aa]ssembly ?[Dd]efinition ?[Ff]ile/
+  - expected: アセンブリ定義ファイル（@<tt>{.asmdef}）
+    pattern:  /[Aa]ssembly ?[Dd]efinition ?[Ff]ile（.+）/
+  - expected: テストアセンブリの定義ファイル
+    pattern:  /テストのアセンブリ定義ファイル/
+  - expected: テストアセンブリの定義ファイル（@<tt>{.asmdef}）
+    pattern:  /テストのアセンブリ定義ファイル（.+）/
