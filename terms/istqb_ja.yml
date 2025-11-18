@@ -11,8 +11,9 @@ version: 1
 rules:
   - expected: メトリック
     patterns:
-      - /メトリクッ?ス/
+      - /メトリッ?クス/
       - /[Mm]etrics?/
+    prh: 単数形
   - expected: カバレッジ
     patterns:
       - カバレジ
