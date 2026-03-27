@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/prh/rules#readme",
   "dependencies": {
-    "prh": "^6.0.2"
+    "prh": "^6.0.4"
   },
   "devDependencies": {
     "glob-expand": "^0.2.1"
