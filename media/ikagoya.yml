@@ -12,13 +12,12 @@ meta:
 version: 1
 imports:
   - ../languages/ja/typo.yml
-  - ../terms/android.yml
+  - ../terms/ai.yml
   - ../terms/csharp.yml
   - ../terms/gamedev.yml
   - ../terms/git.yml
   - ../terms/github.yml
   - ../terms/istqb_ja.yml
-  - ../terms/javascript.yml
   - ../terms/jetbrains.yml
   - ../terms/macos.yml
   - ../terms/review.yml

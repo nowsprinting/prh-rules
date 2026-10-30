@@ -1,0 +1,58 @@
+# Rules for AI
+
+meta:
+  reviewer:
+    - nowsprinting
+  rules:   https://github.com/prh/rules
+
+version: 1
+rules:
+  - expected: 推論
+    patterns:
+      - /インファレンス/
+      - /\b[Ii]nference\b/
+    prh: inferenceの意。学習済みモデルに入力を与えて出力を得る処理全般を指し、reasoningの有無にかかわらずLLMが出力を返す処理全体を含む
+    specs:
+      - from: インファレンス
+        to:   推論
+      - from: Inference
+        to:   推論
+  - expected: 推論モデル
+    patterns:
+      - /\b[Rr]easoning [Mm]odels?\b/
+      - /リーズニング・?モデル/
+      - /思考モデル/
+    prh: reasoning modelの意。応答前に思考ステップを実行するように学習されたAIモデル（OpenAI o系列、Claude Extended Thinkingなど）
+    specs:
+      - from: Reasoning model
+        to:   推論モデル
+      - from: リーズニングモデル
+        to:   推論モデル
+      - from: 思考モデル
+        to:   推論モデル
+  - expected: バイブコーディング
+    patterns:
+      - /\b[Vv]i[bv]e[ -]?[Cc]oding\b/
+      - /[バヴ]ァ?イブ・?コーディング/
+    prh: カタカナ表記とする
+    specs:
+      - from: vibe coding
+        to:   バイブコーディング
+      - from: Vive Coding
+        to:   バイブコーディング
+      - from: ヴァイブコーディング
+        to:   バイブコーディング
+      - from: バイブ・コーディング
+        to:   バイブコーディング
+  - expected: コーディングエージェント
+    patterns:
+      - /\b[Cc]oding [Aa]gents?\b/
+      - /コーディング・エージェント/
+    prh: カタカナ表記とする
+    specs:
+      - from: coding agent
+        to:   コーディングエージェント
+      - from: Coding Agents
+        to:   コーディングエージェント
+      - from: コーディング・エージェント
+        to:   コーディングエージェント
