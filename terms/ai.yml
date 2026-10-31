@@ -46,9 +46,9 @@ rules:
         to:   バイブコーディング
   - expected: コーディングエージェント
     patterns:
-      - /\b[Cc]oding [Aa]gents?\b/
-      - /コーディング・エージェント/
-    prh: カタカナ表記とする
+      - /(?:\bAI[ ・]?)?\b[Cc]oding [Aa]gents?\b/
+      - /(?:AI[ ・]?)?コーディング・?エージェント/
+    prh: カタカナ表記とし、頭に「AI」を付けない
     specs:
       - from: coding agent
         to:   コーディングエージェント
@@ -56,3 +56,25 @@ rules:
         to:   コーディングエージェント
       - from: コーディング・エージェント
         to:   コーディングエージェント
+      - from: AIコーディングエージェント
+        to:   コーディングエージェント
+      - from: AI coding agent
+        to:   コーディングエージェント
+      - from: AI・コーディングエージェント
+        to:   コーディングエージェント
+  - expected: エージェントスキル
+    patterns:
+      - /(?:\bAI[ ・]?)?\b[Aa]gent [Ss]kills?\b/
+      - /(?:AI[ ・]?)?エージェント・?スキル/
+    prh: カタカナ表記とし、頭に「AI」を付けない
+    specs:
+      - from: agent skills
+        to:   エージェントスキル
+      - from: Agent Skills
+        to:   エージェントスキル
+      - from: エージェント・スキル
+        to:   エージェントスキル
+      - from: AIエージェントスキル
+        to:   エージェントスキル
+      - from: AI エージェントスキル
+        to:   エージェントスキル
