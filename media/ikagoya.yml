@@ -348,6 +348,8 @@ rules:
   - expected: ユーザー
     pattern:  /ユーザ(?!ー)/ # 末尾に長音記号がつかない「ユーザ」だけ拾う
     prh: ユーザーでもユーザでもいいんだけどユーザーで統一してる
+  - expected: サーバー
+    pattern:  /サーバ(?!ー)/
 
   - expected: Wi-Fi
     pattern:  WiFi
