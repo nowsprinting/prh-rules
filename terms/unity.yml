@@ -22,12 +22,14 @@ rules:
   - expected: エディター
     patterns:
       - /エディタ(?!ー)/
-      - /[Ee]ditor/
+      - /(?<!\.)[Ee]ditor(?!config)/
     specs:
       - from: エディタ
         to:   エディター
       - from: エディター
         to:   エディター
+      - from: .editorconfig
+        to:   .editorconfig
   - expected: Scene
     pattern:  シーン
   - expected: Prefab
