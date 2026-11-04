@@ -19,17 +19,28 @@ rules:
         to:   Community
       - from: community
         to:   community
+  - expected: Unityエディター
+    pattern:  /[Uu]nity( ?エディター?| [Ee]ditor)/ # 名前空間のUnityEditorは除外
+    specs:
+      - from: Unityエディタ
+        to:   Unityエディター
+      - from: unity エディター
+        to:   Unityエディター
+      - from: Unity Editor
+        to:   Unityエディター
+      - from: unity editor
+        to:   Unityエディター
+      - from: UnityEditor
+        to:   UnityEditor
+      - from: editorconfig
+        to:   editorconfig
   - expected: エディター
-    patterns:
-      - /エディタ(?!ー)/
-      - /(?<!\.)[Ee]ditor(?!config)/
+    pattern:  /エディタ(?!ー)/
     specs:
       - from: エディタ
         to:   エディター
       - from: エディター
         to:   エディター
-      - from: .editorconfig
-        to:   .editorconfig
   - expected: Scene
     pattern:  シーン
   - expected: Prefab
